@@ -15,6 +15,10 @@ public class BreakoutController : MonoBehaviour
 
     Rigidbody2D PlayerRb;
 
+    public bool movingRight;
+
+    public bool movingLeft;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,10 +32,17 @@ public class BreakoutController : MonoBehaviour
         if (Input.GetKey(MoveRight))
         {
             PlayerRb.velocity = new Vector2(1, 0) * playerSpeed;
+            movingRight = true;
         }
-        if (Input.GetKey(MoveLeft))
+        else if (Input.GetKey(MoveLeft))
         {
             PlayerRb.velocity = new Vector2(-1, 0) * playerSpeed;
+            movingLeft = true;
+        }
+        else
+        {
+            movingLeft = false;
+            movingRight = false;
         }
     }
 }
