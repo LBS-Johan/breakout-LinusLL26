@@ -8,19 +8,21 @@ public class BlockSpawner : MonoBehaviour
 
     public int Blockamount;
 
-    public float BlockSpacing;
+    float BlockSpacingX;
 
-    public float BlockSize;
+    float BlockSpacingY;
 
     // Start is called before the first frame update
     void Start()
     {
-    
+        BlockSpacingX = 16 / Blockamount;
+        BlockSpacingY = 8 / Blockamount;
+        Vector2 BlockStartPos = new Vector2(16 - BlockSpacingX, 8 - BlockSpacingY);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
 }
