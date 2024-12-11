@@ -610,8 +610,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block: {fileID: 3666521565801430480, guid: 685930a925fa58b4baa035411cb1740d, type: 3}
-  spawnDistance: {x: 0, y: 0, z: 0}
-  rowAmount: 40
+  spawnDistanceDifference: {x: 2, y: 1, z: 0}
+  maxCollumAmount: 20
+  maxRowAmount: 3
+  isCodeRunning: 1
 --- !u!4 &611069168
 Transform:
   m_ObjectHideFlags: 0

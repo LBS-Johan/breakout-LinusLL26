@@ -7,20 +7,29 @@ public class SpawnBlocks : MonoBehaviour
     public GameObject block;
     GameObject blockClone;
     Vector3 spawnPosition = new Vector3(8, 3.5f, 0);
-    public Vector3 spawnDistance;
-    public int rowAmount;
+    Vector3 firstRowSpawnPosition = new Vector3(8, 3.5f, 0);
+    public Vector3 spawnDistanceDifference;
+    public int maxCollumAmount;
+    int rowAmount;
+    public int maxRowAmount;
+    public bool isCodeRunning;
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < rowAmount; i++)
+        if (isCodeRunning == true)
         {
-            if(spawnPosition.x < -8)
+            for (rowAmount = 0; rowAmount < maxRowAmount; rowAmount++)
             {
-                
-            }
-            else
-            {
-                CreateBlock(spawnPosition + new Vector3(-1, 0, 0));
+                for (int i = 0; i < maxCollumAmount; i++)
+                {
+                    if (spawnPosition.x > -8)
+                    {
+                        CreateBlock(spawnPosition + new Vector3(-spawnDistanceDifference.x, 0, 0));
+                    }
+                }
+                spawnPosition.x = 8;
+                CreateBlock(spawnPosition + new Vector3(0, -spawnDistanceDifference.y, 0));
+
             }
         }
     }
