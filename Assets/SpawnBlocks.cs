@@ -6,7 +6,7 @@ public class SpawnBlocks : MonoBehaviour
 {
     public GameObject block;
     GameObject blockClone;
-    Vector3 spawnPosition = new Vector3(8, 4.2f, 0);
+    Vector3 spawnPosition = new Vector3(7, 4.2f, 0);
     public Vector3 spawnPositionLimit;
     public Vector3 spawnDistanceDifference;
     public int maxCollumAmount;
@@ -22,12 +22,12 @@ public class SpawnBlocks : MonoBehaviour
             {
                 for (int i = 0; i < maxCollumAmount; i++)
                 {
-                    if (spawnPosition.x > -8)
+                    if (spawnPosition.x > -7)
                     {
                         CreateBlock(spawnPosition + new Vector3(-spawnDistanceDifference.x, 0, 0));
                     }
                 }
-                spawnPosition.x = 8;
+                spawnPosition.x = 7;
                 CreateBlock(spawnPosition + new Vector3(0, -spawnDistanceDifference.y, 0));
             }
         }

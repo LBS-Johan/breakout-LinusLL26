@@ -13,4 +13,8 @@ public class SceneManagerScript : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+    public void SwitchToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

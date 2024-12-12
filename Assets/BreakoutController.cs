@@ -7,11 +7,9 @@ public class BreakoutController : MonoBehaviour
     [SerializeField]
     float playerSpeed;
 
-    [SerializeField]
-    KeyCode MoveLeft;
+    public KeyCode MoveLeft;
 
-    [SerializeField]
-    KeyCode MoveRight;
+    public KeyCode MoveRight;
 
     Rigidbody2D PlayerRb;
 
