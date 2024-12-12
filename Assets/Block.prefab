@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockHealth: 1
+  gotDestroyedCount: 0
+  spawnBlocks: {fileID: 5906376295772185353, guid: 212e0f2d866dc314997abfda7cf59bd8, type: 3}
 --- !u!61 &4978889533973888590
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -157,4 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb7290948cbb5b44ebb1b895d5118ede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bounds: {x: 7, y: 4.2}
+  Bounds: {x: 7, y: 4.2, z: 0}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,11 @@ using UnityEngine;
 public class BreakWhenCollision : MonoBehaviour
 {
     public int blockHealth;
-    public int gotDestroyedCount;
+    public int blocksGone;
     // Start is called before the first frame update
     void Start()
     {
-        gotDestroyedCount = 0;
+        blocksGone = 0;
     }
 
     // Update is called once per frame
@@ -17,12 +18,13 @@ public class BreakWhenCollision : MonoBehaviour
     {
         if (blockHealth <= 0)
         {
-            gotDestroyedCount += 1;
             Destroy(gameObject); 
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        print("block got hit");
         blockHealth-= 1;
+        blocksGone-= 1;
     }
 }
