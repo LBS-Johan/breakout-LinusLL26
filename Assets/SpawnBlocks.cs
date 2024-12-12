@@ -22,13 +22,8 @@ public class SpawnBlocks : MonoBehaviour
             {
                 for (int i = 0; i < maxCollumAmount; i++)
                 {
-                    if (spawnPosition.x > -7)
-                    {
-                        CreateBlock(spawnPosition + new Vector3(-spawnDistanceDifference.x, 0, 0));
-                    }
+                    CreateBlock(new Vector3(i * spawnDistanceDifference.x - spawnDistanceDifference.x * maxRowAmount / 2, rowAmount * spawnDistanceDifference.y));
                 }
-                spawnPosition.x = 7;
-                CreateBlock(spawnPosition + new Vector3(0, -spawnDistanceDifference.y, 0));
             }
         }
     }

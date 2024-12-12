@@ -5,10 +5,11 @@ using UnityEngine;
 public class BreakWhenCollision : MonoBehaviour
 {
     public int blockHealth;
+    public int gotDestroyedCount;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gotDestroyedCount = 0;
     }
 
     // Update is called once per frame
@@ -16,7 +17,8 @@ public class BreakWhenCollision : MonoBehaviour
     {
         if (blockHealth <= 0)
         {
-            Destroy(gameObject);
+            gotDestroyedCount += 1;
+            Destroy(gameObject); 
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
