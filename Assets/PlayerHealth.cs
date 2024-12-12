@@ -21,7 +21,6 @@ public class PlayerHealth : MonoBehaviour
         if (damageTaken >= playerHealth)
         {
             isDead = true;
-            print("Player health = 0");
         }
     }
 }

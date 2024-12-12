@@ -6,8 +6,8 @@ public class SpawnBlocks : MonoBehaviour
 {
     public GameObject block;
     GameObject blockClone;
-    Vector3 spawnPosition = new Vector3(8, 3.5f, 0);
-    Vector3 firstRowSpawnPosition = new Vector3(8, 3.5f, 0);
+    Vector3 spawnPosition = new Vector3(8, 4.2f, 0);
+    public Vector3 spawnPositionLimit;
     public Vector3 spawnDistanceDifference;
     public int maxCollumAmount;
     int rowAmount;
@@ -29,7 +29,6 @@ public class SpawnBlocks : MonoBehaviour
                 }
                 spawnPosition.x = 8;
                 CreateBlock(spawnPosition + new Vector3(0, -spawnDistanceDifference.y, 0));
-
             }
         }
     }
