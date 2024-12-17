@@ -6,11 +6,11 @@ using UnityEngine;
 public class BreakWhenCollision : MonoBehaviour
 {
     public int blockHealth;
-    public int blocksGone;
+
     // Start is called before the first frame update
     void Start()
     {
-        blocksGone = 0;
+
     }
 
     // Update is called once per frame
@@ -24,7 +24,6 @@ public class BreakWhenCollision : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         print("block got hit");
-        blockHealth-= 1;
-        blocksGone-= 1;
+        blockHealth -= 1;
     }
 }

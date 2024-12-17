@@ -17,7 +17,7 @@ public class GameOver : MonoBehaviour
     {
         if (playerHealth.isDead == true)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
     }
 }

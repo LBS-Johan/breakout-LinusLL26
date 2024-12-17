@@ -23,10 +23,11 @@ public class Ballstart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ballRb.velocity = new Vector2(ballRb.velocity.x, ballRb.velocity.y).normalized * ballSpeed;
+      ballRb.velocity = new Vector2(ballRb.velocity.x, ballRb.velocity.y).normalized * ballSpeed;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+ 
         if (collision.gameObject.name == "Player")
         {
             if (breakoutController.movingRight == true)

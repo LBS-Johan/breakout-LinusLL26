@@ -14,11 +14,9 @@ public class SpawnBlocks : MonoBehaviour
     int rowAmount;
     public int maxRowAmount;
     public bool isCodeRunning;
-    public int blocksOut;
     // Start is called before the first frame update
     void Start()
     {
-        blocksOut = 0;
         if (isCodeRunning == true)
         {
             for (rowAmount = 0; rowAmount < maxRowAmount; rowAmount++)
@@ -34,13 +32,11 @@ public class SpawnBlocks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        blocksOut = blocksOut - whenCollision.blocksGone;
     }
     void CreateBlock(Vector3 spawnpoint)
     { 
         blockClone = Instantiate(block, spawnpoint, Quaternion.identity);
         spawnPosition = blockClone.transform.position;
         blockClone.transform.parent = transform;
-        blocksOut += 1;
     }
 }

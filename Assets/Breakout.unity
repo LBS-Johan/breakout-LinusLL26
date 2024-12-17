@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e9ef3786f1edd34293beef7bb0b851e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSpeed: 3
+  ballSpeed: 4
   ballRb: {fileID: 0}
   breakoutController: {fileID: 1912013607}
   forceAdder: 2
@@ -859,6 +859,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f244a49632f8f4d8c3673b476b8e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 988117899}
 --- !u!4 &470017348
 Transform:
   m_ObjectHideFlags: 0
@@ -1042,7 +1043,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: 70}
+  m_AnchoredPosition: {x: 37, y: 70}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &865377717
@@ -1128,7 +1129,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 72.05289, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1153,7 +1154,7 @@ GameObject:
   - component: {fileID: 988117900}
   - component: {fileID: 988117899}
   m_Layer: 0
-  m_Name: ScoreManager(WIP)
+  m_Name: ScoreManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1171,7 +1172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49c00a1fc1817b41b0b9127577d5120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockHealth: {fileID: 1891872802988572576, guid: 685930a925fa58b4baa035411cb1740d, type: 3}
+  blockContainer: {fileID: 1485360183}
   score: 0
   scoreMultiplier: 10
 --- !u!4 &988117900
@@ -1462,6 +1463,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1867034807}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!4 &1485360183 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6613444067213150891, guid: 212e0f2d866dc314997abfda7cf59bd8, type: 3}
+  m_PrefabInstance: {fileID: 5442875127588749027}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1652977130
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,6 +2391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlockSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 5906376295772185353, guid: 212e0f2d866dc314997abfda7cf59bd8, type: 3}
+      propertyPath: whenCollision
+      value: 
+      objectReference: {fileID: 1891872802988572576, guid: 685930a925fa58b4baa035411cb1740d, type: 3}
     - target: {fileID: 6613444067213150891, guid: 212e0f2d866dc314997abfda7cf59bd8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
